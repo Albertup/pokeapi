@@ -80,47 +80,58 @@ const drawPokemons = (pokemons) => {
       `    
   gallery$$.appendChild(pokecard$$);
   }
-
 }
 //Search
 const searchPokemons = (search, pokemons) => {
     const filteredPokemons = pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(search.toLowerCase()) || pokemon.type.toLowerCase().includes(search.toLowerCase()) || pokemon.id.toLowerCase().includes(search.toLowerCase()));
     drawPokemons(filteredPokemons); 
-
-    // const firePokemons = pokemons.filter((pokemon) => pokemon.type == "fire");
-    // drawPokemons(firePokemons); 
-    // const normalPokemons = pokemons.filter((pokemon) => pokemon.type == "normal");
-    // drawPokemons(normalPokemons); 
-    // const fightingPokemons = pokemons.filter((pokemon) => pokemon.type == "fighting");
-    // drawPokemons(fightingPokemons); 
-    // const flyingPokemons = pokemons.filter((pokemon) => pokemon.type == "flying");
-    // drawPokemons(flyingPokemons); 
 }
-
-
-const buttonPokemon = (search, pokemons) => {
-    const firePokemons = pokemons.filter((pokemon) => pokemon.type == "fire");
-    drawPokemons(firePokemons); 
+const buttonsPokemons = (type,pokemons) => {
+    const btnPokemons = pokemons.filter((pokemon) => pokemon.type == type);
+    drawPokemons(btnPokemons); 
  }
 // total function to add/gather all the details of the query.
-const init = async () => {
+async function init() {
     const pokemons = await getPokemons(151);
     console.log(pokemons);
-    const mappedPokemons = mapPokemons(pokemons)
+    const mappedPokemons = mapPokemons(pokemons);
     //console.log(mappedPokemons);
-    drawPokemons (mappedPokemons); 
+    drawPokemons(mappedPokemons);
     let input$$ = document.querySelector('input');
-    input$$.addEventListener('keypress', () => searchPokemons(input$$.value, mappedPokemons));
-
+    input$$.addEventListener('keyup', () => searchPokemons(input$$.value, mappedPokemons));
     let fire$$ = document.querySelector('.firePokemon');
-    gallery$$.classList.add('firePokemon')
-    fire$$.addEventListener('click', () => buttonPokemons(fire$$.value, mappedPokemons));
+    fire$$.addEventListener('click', () => searchPokemons("fire", mappedPokemons));
     let normal$$ = document.querySelector('.normalPokemon');
-    normal$$.addEventListener('click', () => searchPokemons(normal$$.value, mappedPokemons));
-    
-    // let fighting$$ = document.querySelector('.fightingPokemon');
-    // fighting$$.addEventListener('click', () => searchPokemons(fighting$$.value, mappedPokemons));
-    // let flying$$ = document.querySelector('.flyingPokemon');
-    // flying$$.addEventListener('click', () => searchPokemons(flying$$.value, mappedPokemons));
-  }
+    normal$$.addEventListener('click', () => searchPokemons("normal", mappedPokemons));
+    let fighting$$ = document.querySelector('.fightingPokemon');
+    fighting$$.addEventListener('click', () => searchPokemons("fighting", mappedPokemons));
+    let flying$$ = document.querySelector('.flyingPokemon');
+    flying$$.addEventListener('click', () => searchPokemons("flying", mappedPokemons));
+    let poison$$ = document.querySelector('.poisonPokemon');
+    poison$$.addEventListener('click', () => searchPokemons("poison", mappedPokemons));
+    let rock$$ = document.querySelector('.rockPokemon');
+    rock$$.addEventListener('click', () => searchPokemons("rock", mappedPokemons));
+    let bug$$ = document.querySelector('.bugPokemon');
+    bug$$.addEventListener('click', () => searchPokemons("bug", mappedPokemons));
+    let ghost$$ = document.querySelector('.ghostPokemon');
+    ghost$$.addEventListener('click', () => searchPokemons("ghost", mappedPokemons));
+    let steel$$ = document.querySelector('.steelPokemon');
+    steel$$.addEventListener('click', () => searchPokemons("steel", mappedPokemons));
+    let water$$ = document.querySelector('.waterPokemon');
+    water$$.addEventListener('click', () => searchPokemons("water", mappedPokemons));
+    let grass$$ = document.querySelector('.grassPokemon');
+    grass$$.addEventListener('click', () => searchPokemons("grass", mappedPokemons));
+    let electric$$ = document.querySelector('.electricPokemon');
+    electric$$.addEventListener('click', () => searchPokemons("electric", mappedPokemons));
+    let psychic$$ = document.querySelector('.psychicPokemon');
+    psychic$$.addEventListener('click', () => searchPokemons("psychic", mappedPokemons));
+    let ice$$ = document.querySelector('.icePokemon');
+    ice$$.addEventListener('click', () => searchPokemons("ice", mappedPokemons));
+    let dragon$$ = document.querySelector('.dragonPokemon');
+    dragon$$.addEventListener('click', () => searchPokemons("dragon", mappedPokemons));
+    let dark$$ = document.querySelector('.darkPokemon');
+    dark$$.addEventListener('click', () => searchPokemons("dark", mappedPokemons));
+    let fairy$$ = document.querySelector('.fairyPokemon');
+    fairy$$.addEventListener('click', () => searchPokemons("fairy", mappedPokemons));
+}
 init();
