@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-family;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.47059;
+    font-weight: 100;
+    letter-spacing: -.022em;
+    background-size: 50%;
+
+    &.dark-mode {
+      background-color: $dark-color;
+      color: $light-color;
+      .b-logo  {
+        background-image: url(src/assets/img/pokelogo_clear.svg);
+        background-repeat: no-repeat;
+      }
+      .b-logo-footer  {
+        background-image: url(src/assets/img/pokelogo_black.svg);
+        background-repeat: no-repeat;
+      }
+      input {
+        background-color: transparent;
+        color: $light-color;
+      }
+      a {
+        color: $dark-color;
+      }
+      button {
+        background-color: $light-color;
+        color: $dark-color;
+      }
+      .b-poke-card__imgframe {
+        background-color: $light-color;
+      }
+      .b-footer-logo__box {
+        border: 2px solid $dark-color;
+      }
+      .b-copyright {
+        color: $dark-color;
+      }
+    }
+    &.light-mode {
+      
+      background-color: $light-color;
+      color: $dark-color;
+      .b-logo  {
+        background-image: url(src/assets/img/pokelogo_black.svg);
+        background-repeat: no-repeat;
+      }
+      .b-logo-footer  {
+        background-image: url(src/assets/img/pokelogo_clear.svg);
+        background-repeat: no-repeat;
+      }
+      input {
+        background-color: transparent;
+        color: $dark-color;
+      }
+      a {
+        color: $dark-color;
+      }
+      button {
+        background-color: $dark-color;
+        color: $light-color;
+      }
+      .b-poke-card__imgframe {
+        background-color: $dark-color;
+      }
+      .b-footer-logo__box {
+        border: 2px solid $light-color;
+      }
+      .b-copyright {
+        color: $light-color;
+      }
+    }
+  }
+  
+
+a:link,
+a:visited {
+  text-decoration:none;
+}
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+}
+input:hover,
+input:focus {
+  border-color: $yellow-color;
+}
+button:hover {
+  background-color: $yellow-color !important;
+}
+
+ul,li {
+  list-style-type:none;
+}
+ul{
+  list-style:none;
+  margin:100px 100px;
+  padding-left:0;
+  width:200px;
+}
+
+li{
+   width:200px;
+  display:block;
+  padding:20px;
+  text-align:center;
+  color:#fff;
+  font-family: 'Oswald', sans-serif;
+}
+

@@ -1,0 +1,191 @@
+footer {
+    min-height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;        
+  }
+
+.b-footer {
+    position: fixed;
+    width: calc(100% + 10px);
+    height: 100%;
+    background-color: currentColor;
+}
+.b-footer-box {
+  display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    
+}
+
+.b-footer-logo__box {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  height: 40px;
+  margin: 15px 10px 10px 10px;
+  border-radius: 50px;
+  opacity: 75%;
+}
+.b-logo-footer {
+  display: flex;
+  width: 80px;
+  height: 300px;
+  margin-top: 5px;
+}
+
+.b-copyright {
+  align-items: flex-end;
+  display: flex;
+  margin: 0PX 20PX 0PX 0PX;
+}
+
+
+/*Scroll to top button*/
+#b-scrollTop{
+  display: flex;
+    display:none;
+    position: fixed;
+    background-color: currentColor;
+    box-shadow: currentColor 0 2px 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-bottom: 70px;
+    opacity: 100%;
+
+}
+#b-scrollTop:hover{
+    opacity: 70%;
+    transition: 0.5s;
+}
+#b-scrollTop:active{
+    background-color: currentColor;
+}
+#b-scrollTop img {
+  height: 18px;
+}
+
+// Menu nav
+nav {
+  display: flex;
+  font-size: 18px;
+  line-height: 20px;
+  position: fixed;
+  width:6em;
+  height: 90%;
+  top:0; bottom:0;
+  margin:auto;
+  left: -200PX;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li {
+  background-color: currentColor;
+  height: 20px;
+  padding: 8px;
+  position: relative;
+  align-content: flex-end;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #F8F6FF;
+  -webkit-transition: -webkit-transform 500ms, background-color 500ms, color 500ms;
+  transition: transform 500ms, background-color 500ms, color 500ms;
+}
+
+.b-sidemenu {
+  text-align: right;
+  padding: 10px;
+  margin-left: 100px;
+  color: currentColor;
+
+}
+nav ul li:nth-child(1) { background-color: transparent;}
+nav ul li:nth-child(2) { background-color: transparent;}
+nav ul li:nth-child(3) { background-color: transparent;}
+nav ul li:nth-child(4) { background-color: transparent;}
+nav ul li:nth-child(5) { background-color: transparent;}
+nav ul li:nth-child(6) { background-color: transparent;}
+nav ul li:nth-child(7) { background-color: transparent;}
+nav ul li:nth-child(8) { background-color: transparent;}
+nav ul li:nth-child(9) { background-color: transparent;}
+nav ul li:nth-child(10) { background-color: transparent;}
+nav ul li:nth-child(11) { background-color: transparent;}
+nav ul li:nth-child(12) { background-color: transparent;}
+nav ul li:nth-child(13) { background-color: transparent;}
+nav ul li:nth-child(14) { background-color: transparent;}
+nav ul li:nth-child(15) { background-color: transparent;}
+nav ul li:nth-child(16) { background-color: transparent;}
+nav ul li:nth-child(17) { background-color: transparent;}
+nav ul li:nth-child(18) { background-color: transparent;}
+//nav ul li:nth-child(1) { background-color: #BCBCAC;}
+// nav ul li:nth-child(2) { background-color: #BC5442;}
+// nav ul li:nth-child(3) { background-color: #669AFF;}
+// nav ul li:nth-child(4) { background-color: #AB549A;}
+// nav ul li:nth-child(5) { background-color: #DEBC54;}
+// nav ul li:nth-child(6) { background-color: #BCAC66;}
+// nav ul li:nth-child(7) { background-color: #ABBC1C;}
+// nav ul li:nth-child(8) { background-color: #6666BC;}
+//nav ul li:nth-child(9) { background-color: #ABACBC;}
+// nav ul li:nth-child(10) { background-color: #FF421C;}
+// nav ul li:nth-child(11) { background-color: #2F9AFF;}
+// nav ul li:nth-child(12) { background-color: #78CD54;}
+// nav ul li:nth-child(13) { background-color: #FFCD30;}
+// nav ul li:nth-child(14) { background-color: #FF549A;}
+// nav ul li:nth-child(15) { background-color: #78DEFF;}
+// nav ul li:nth-child(16) { background-color: #7866EF;}
+// nav ul li:nth-child(17) { background-color: #785442;}
+// nav ul li:nth-child(18) { background-color: #FFACFF;}
+// nav ul li:nth-child(19) { background-color: #0E2E4C;}
+
+nav ul li:hover {
+  background-color: $yellow-color;
+  -webkit-transform: translateX(4.5em);
+  transform: translateX(4.5em);
+}
+
+nav ul li span {
+  display:block;
+  position: absolute;
+  font-size:24px;
+  line-height: 20px;
+  height:15px;
+  top:0; bottom:0;
+  margin:auto;
+  right: 10px;
+  color: #F8F6FF;
+  background-color: #F8F6FF;
+}
+
+
+.b-sidespan {
+  padding-bottom: 8px;
+}
+
+.typePokemon {
+  background-color: transparent !important;
+  border:none !important;
+  width: 25px;
+  height: 25px;
+  margin-right: -40px;
+  margin-bottom: 10px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+.typeimg {
+  width: 25px;
+  height: 25px;
+}

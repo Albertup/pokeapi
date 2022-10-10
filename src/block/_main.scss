@@ -1,0 +1,86 @@
+.b-poke {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.poke-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: calc(100% - 80px);
+    max-width: 1200px;
+}
+
+.b-poke-card {
+    border: 1px solid black;
+    border-spacing: 10px;
+    width: 200px; 
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 70px 10PX 10PX 10PX;
+    align-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    }
+
+.b-poke-card-header {
+  width: 100%;
+  display: block;
+}
+.b-poke-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+}
+.b-poke-card__imgframe {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  margin-top: -60px;
+}
+.b-poke-card__img {
+  width: 140px;
+  height: 140px;
+}
+.b-poke-card__title {
+  margin-top: 2rem;
+  font-size: 24px;
+}
+.b-poke-card__title span {
+  font-weight: 300;
+  font-size: 12px;
+}
+.b-poke-card__text {
+  color: var(--dark-gray);
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.b-poke-card__type {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.b-poke-card-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.b-poke-card__skills {
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+}
+.b-poke-card__skills h3 {
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.b-poke-card__skills p {
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
