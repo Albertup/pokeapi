@@ -36,11 +36,38 @@ footer {
 
 .b-copyright {
   align-items: flex-end;
+  flex-direction: column;
   display: flex;
-  margin: 0PX 20PX 0PX 0PX;
+  margin: 0PX 25PX 0PX 0PX;
+}
+.b-footer-text {
+  font-size: 11px;
+}
+i::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size: 28px;
+  opacity: 95%;
+}
+.b-footer--links {
+  display: flex;
+  width: 100%;
+  margin-bottom: -10PX;
+  margin-top: 8px;
+  height: inherit;
+  justify-content: flex-end;
+  align-items: center;
+
 }
 
-
+.b-footer--links__icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    margin-bottom: 15PX;
+}
 /*Scroll to top button*/
 #b-scrollTop{
   display: flex;
@@ -75,11 +102,11 @@ footer {
 // Menu nav
 nav {
   display: flex;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 15px;
   position: fixed;
   width:6em;
-  height: 90%;
+  height: 80%;
   top:0; bottom:0;
   margin:auto;
   left: -200PX;
@@ -91,17 +118,17 @@ nav ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
+ 
 }
 
 nav ul li {
   background-color: currentColor;
-  height: 20px;
-  padding: 8px;
+  height: 15px;
+  padding: 5px;
   position: relative;
   align-content: flex-end;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: #F8F6FF;
   -webkit-transition: -webkit-transform 500ms, background-color 500ms, color 500ms;
   transition: transform 500ms, background-color 500ms, color 500ms;
 }
@@ -110,49 +137,50 @@ nav ul li {
   text-align: right;
   padding: 10px;
   margin-left: 100px;
-  color: currentColor;
 
 }
+
 nav ul li:nth-child(1) { background-color: transparent;}
+nav ul li:nth-child(1):hover { border: 3px solid #9ca071;}
 nav ul li:nth-child(2) { background-color: transparent;}
+nav ul li:nth-child(2):hover { border: 3px solid #ad2f29;}
 nav ul li:nth-child(3) { background-color: transparent;}
+nav ul li:nth-child(3):hover { border: 3px solid #9688b5;}
 nav ul li:nth-child(4) { background-color: transparent;}
+nav ul li:nth-child(4):hover { border: 3px solid #8e3e87;}
 nav ul li:nth-child(5) { background-color: transparent;}
+nav ul li:nth-child(5):hover { border: 3px solid #ad9a3c;}
 nav ul li:nth-child(6) { background-color: transparent;}
+nav ul li:nth-child(6):hover { border: 3px solid #9eb039;}
 nav ul li:nth-child(7) { background-color: transparent;}
+nav ul li:nth-child(7):hover { border: 3px solid #645085;}
 nav ul li:nth-child(8) { background-color: transparent;}
+nav ul li:nth-child(8):hover { border: 3px solid #b0b1c3;}
 nav ul li:nth-child(9) { background-color: transparent;}
+nav ul li:nth-child(9):hover { border: 3px solid #e17733;}
 nav ul li:nth-child(10) { background-color: transparent;}
+nav ul li:nth-child(10):hover { border: 3px solid #6781b3;}
 nav ul li:nth-child(11) { background-color: transparent;}
+nav ul li:nth-child(11):hover { border: 3px solid #71b951;}
 nav ul li:nth-child(12) { background-color: transparent;}
+nav ul li:nth-child(12):hover { border: 3px solid #f2cd3c;}
 nav ul li:nth-child(13) { background-color: transparent;}
+nav ul li:nth-child(13):hover { border: 3px solid #df4f7c;}
 nav ul li:nth-child(14) { background-color: transparent;}
+nav ul li:nth-child(14):hover { border: 3px solid #94d1cb;}
 nav ul li:nth-child(15) { background-color: transparent;}
+nav ul li:nth-child(15):hover { border: 3px solid #595091;}
 nav ul li:nth-child(16) { background-color: transparent;}
+nav ul li:nth-child(16):hover { border: 3px solid #625041;}
 nav ul li:nth-child(17) { background-color: transparent;}
+nav ul li:nth-child(17):hover { border: 3px solid #e591a0;}
 nav ul li:nth-child(18) { background-color: transparent;}
-//nav ul li:nth-child(1) { background-color: #BCBCAC;}
-// nav ul li:nth-child(2) { background-color: #BC5442;}
-// nav ul li:nth-child(3) { background-color: #669AFF;}
-// nav ul li:nth-child(4) { background-color: #AB549A;}
-// nav ul li:nth-child(5) { background-color: #DEBC54;}
-// nav ul li:nth-child(6) { background-color: #BCAC66;}
-// nav ul li:nth-child(7) { background-color: #ABBC1C;}
-// nav ul li:nth-child(8) { background-color: #6666BC;}
-//nav ul li:nth-child(9) { background-color: #ABACBC;}
-// nav ul li:nth-child(10) { background-color: #FF421C;}
-// nav ul li:nth-child(11) { background-color: #2F9AFF;}
-// nav ul li:nth-child(12) { background-color: #78CD54;}
-// nav ul li:nth-child(13) { background-color: #FFCD30;}
-// nav ul li:nth-child(14) { background-color: #FF549A;}
-// nav ul li:nth-child(15) { background-color: #78DEFF;}
-// nav ul li:nth-child(16) { background-color: #7866EF;}
-// nav ul li:nth-child(17) { background-color: #785442;}
-// nav ul li:nth-child(18) { background-color: #FFACFF;}
-// nav ul li:nth-child(19) { background-color: #0E2E4C;}
+nav ul li:nth-child(18):hover { border: 3px solid #d6b965;}
+
 
 nav ul li:hover {
-  background-color: $yellow-color;
+  border: 3px solid $yellow-color;
+  padding: 3px;
   -webkit-transform: translateX(4.5em);
   transform: translateX(4.5em);
 }
@@ -162,12 +190,10 @@ nav ul li span {
   position: absolute;
   font-size:24px;
   line-height: 20px;
-  height:15px;
+  height:18px;
   top:0; bottom:0;
   margin:auto;
   right: 10px;
-  color: #F8F6FF;
-  background-color: #F8F6FF;
 }
 
 
@@ -178,14 +204,17 @@ nav ul li span {
 .typePokemon {
   background-color: transparent !important;
   border:none !important;
-  width: 25px;
-  height: 25px;
-  margin-right: -40px;
-  margin-bottom: 10px;
-  border-radius: 13px;
+  width: 28px;
+  height: 28px;
+  margin-right: -45px;
+  border-radius: 15px;
   cursor: pointer;
 }
 .typeimg {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 3px;
 }
