@@ -31,7 +31,7 @@ body {
         color: $light-color;
       }
       a {
-        color: $dark-color;
+        color: $light-color;
       }
       button {
         background-color: $light-color;
@@ -44,6 +44,9 @@ body {
         border: 2px solid $dark-color;
       }
       .b-copyright {
+        color: $dark-color;
+      }
+      i::before {
         color: $dark-color;
       }
     }
@@ -77,6 +80,9 @@ body {
         border: 2px solid $light-color;
       }
       .b-copyright {
+        color: $light-color;
+      }
+      i::before {
         color: $light-color;
       }
     }

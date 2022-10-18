@@ -18,7 +18,7 @@ var scrollTop = document.getElementById("b-scrollTop");
 window.onscroll = function(){
     scrollfunction()
 };
-function scrollfunction(){
+const scrollfunction = () => {
 
     if( document.body.scrollTop > 500 || document.documentElement.scrollTop > 500){
         scrollTop.style.display = "block";
@@ -35,7 +35,7 @@ scrollTop.addEventListener("click", function(){
     })
 })
 
-function backToTop() {
+const backToTop = () => {
     window.scrollTo({
         top: 0,
         left: 0,

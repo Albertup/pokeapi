@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./src/assets/icon/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/js/main_script.js" defer></script>
     <script src="./src/js/main_code.js" defer></script>
     <title>Pokémon | Pokedex</title>
 </head>
 <body id="body" class="dark-mode">
+</div>
     <header>
         <div class="b-header-search">
             <div class="b-search">
@@ -46,8 +50,15 @@
                 <div class="b-footer-logo__box">
                     <div class="b-logo b-logo-footer"></div>  
                 </div>
+                
                 <div class="b-copyright">
-                    <small> Copyright &copy; <script>document.write(new Date().getFullYear())</script> Bertophenia's All Rights Reserved</small>
+                    <div class="b-footer--links">
+                        <div class="b-footer--links__icon"><a href="https://www.github.com/Albertup" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></div>
+                        <div class="b-footer--links__icon"><a href="https://www.linkedin.com/in/albertup/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+                        <div class="b-footer--links__icon"><a href="https://www.twitter.com/albertupgrade" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></div>
+                        <div class="b-footer--links__icon"><a href="https://www.behance.net/albertogarca47" target="_blank"><i class="fa fa-behance-square" aria-hidden="true"></i></a></div>
+                    </div>
+                    <p class="b-footer-text"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> Bertophenia's All Rights Reserved</p>
                 </div>
             </div>
             
@@ -61,24 +72,27 @@
     </div>
     <nav>
         <ul>
-          <li><a class="b-sidemenu">Normal<span class="b-sidespan"><button class="typePokemon normalPokemon"><img class="typeimg" src="./src/assets/img/normal.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Fighting<span class="b-sidespan"><button class="typePokemon fightingPokemon"><img class="typeimg" src="./src/assets/img/fighting.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Flying<span class="b-sidespan"><button class="typePokemon flyingPokemon"><img class="typeimg" src="./src/assets/img/flying.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Poison<span class="b-sidespan"><button class="typePokemon poisonPokemon"><img class="typeimg" src="./src/assets/img/poison.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Rock<span class="b-sidespan"><button class="typePokemon rockPokemon"><img class="typeimg" src="./src/assets/img/rock.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Bug<span class="b-sidespan"><button class="typePokemon bugPokemon"><img class="typeimg" src="./src/assets/img/bug.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Ghost<span class="b-sidespan"><button class="typePokemon ghostPokemon"><img class="typeimg" src="./src/assets/img/ghost.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Steel<span class="b-sidespan"><button class="typePokemon steelPokemon"><img class="typeimg" src="./src/assets/img/steel.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Fire<span class="b-sidespan"><button class="typePokemon firePokemon"><img class="typeimg" src="./src/assets/img/fire.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Water<span class="b-sidespan"><button class="typePokemon waterPokemon"><img class="typeimg" src="./src/assets/img/water.png" alt="fire"></button></span></a></a></li>
-          <li><a class="b-sidemenu">Grass<span class="b-sidespan"><button class="typePokemon grassPokemon"><img class="typeimg" src="./src/assets/img/grass.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Electric<span class="b-sidespan"><button class="typePokemon electricPokemon"><img class="typeimg" src="./src/assets/img/electric.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Psychic<span class="b-sidespan"><button class="typePokemon psychicPokemon"><img class="typeimg" src="./src/assets/img/psychic.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Ice<span class="b-sidespan"><button class="typePokemon icePokemon"><img class="typeimg" src="./src/assets/img/ice.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Dragon<span class="b-sidespan"><button class="typePokemon dragonPokemon"><img class="typeimg" src="./src/assets/img/dragon.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Dark<span class="b-sidespan"><button class="typePokemon darkPokemon"><img class="typeimg" src="./src/assets/img/dark.png" alt="fire"></button></span></a></li>
-          <li><a class="b-sidemenu">Fairy<span class="b-sidespan"><button class="typePokemon fairyPokemon"><img class="typeimg" src="./src/assets/img/fairy.png" alt="fire"></button></span></a></li>
+          <li><a class="b-sidemenu">Normal<span class="b-sidespan"><button class="typePokemon normalPokemon"><img class="typeimg" src="./src/assets/img/normal.png" alt="Normal"></button></span></a></li>
+          <li><a class="b-sidemenu">Fighting<span class="b-sidespan"><button class="typePokemon fightingPokemon"><img class="typeimg" src="./src/assets/img/fighting.png" alt="Fighting"></button></span></a></li>
+          <li><a class="b-sidemenu">Flying<span class="b-sidespan"><button class="typePokemon flyingPokemon"><img class="typeimg" src="./src/assets/img/flying.png" alt="Flying"></button></span></a></li>
+          <li><a class="b-sidemenu">Poison<span class="b-sidespan"><button class="typePokemon poisonPokemon"><img class="typeimg" src="./src/assets/img/poison.png" alt="Poison"></button></span></a></li>
+          <li><a class="b-sidemenu">Rock<span class="b-sidespan"><button class="typePokemon rockPokemon"><img class="typeimg" src="./src/assets/img/rock.png" alt="Rock"></button></span></a></li>
+          <li><a class="b-sidemenu">Bug<span class="b-sidespan"><button class="typePokemon bugPokemon"><img class="typeimg" src="./src/assets/img/bug.png" alt="Bug"></button></span></a></li>
+          <li><a class="b-sidemenu">Ghost<span class="b-sidespan"><button class="typePokemon ghostPokemon"><img class="typeimg" src="./src/assets/img/ghost.png" alt="Ghost"></button></span></a></li>
+          <li><a class="b-sidemenu">Steel<span class="b-sidespan"><button class="typePokemon steelPokemon"><img class="typeimg" src="./src/assets/img/steel.png" alt="Steel"></button></span></a></li>
+          <li><a class="b-sidemenu">Fire<span class="b-sidespan"><button class="typePokemon firePokemon"><img class="typeimg" src="./src/assets/img/fire.png" alt="Fire"></button></span></a></li>
+          <li><a class="b-sidemenu">Water<span class="b-sidespan"><button class="typePokemon waterPokemon"><img class="typeimg" src="./src/assets/img/water.png" alt="Water"></button></span></a></a></li>
+          <li><a class="b-sidemenu">Grass<span class="b-sidespan"><button class="typePokemon grassPokemon"><img class="typeimg" src="./src/assets/img/grass.png" alt="Grass"></button></span></a></li>
+          <li><a class="b-sidemenu">Electric<span class="b-sidespan"><button class="typePokemon electricPokemon"><img class="typeimg" src="./src/assets/img/electric.png" alt="Electric"></button></span></a></li>
+          <li><a class="b-sidemenu">Psychic<span class="b-sidespan"><button class="typePokemon psychicPokemon"><img class="typeimg" src="./src/assets/img/psychic.png" alt="Ice"></button></span></a></li>
+          <li><a class="b-sidemenu">Ice<span class="b-sidespan"><button class="typePokemon icePokemon"><img class="typeimg" src="./src/assets/img/ice.png" alt="Ice"></button></span></a></li>
+          <li><a class="b-sidemenu">Dragon<span class="b-sidespan"><button class="typePokemon dragonPokemon"><img class="typeimg" src="./src/assets/img/dragon.png" alt="Dragon"></button></span></a></li>
+          <li><a class="b-sidemenu">Dark<span class="b-sidespan"><button class="typePokemon darkPokemon"><img class="typeimg" src="./src/assets/img/dark.png" alt="Dark"></button></span></a></li>
+          <li><a class="b-sidemenu">Fairy<span class="b-sidespan"><button class="typePokemon fairyPokemon"><img class="typeimg" src="./src/assets/img/fairy.png" alt="Fairy"></button></span></a></li>
+          <li><a class="b-sidemenu">Ground<span class="b-sidespan"><button class="typePokemon groundPokemon"><img class="typeimg" src="./src/assets/img/ground.png" alt="Ground"></button></span></a></li>
         </ul>
       </nav>
+      
+</div>
 </body>
 </html>

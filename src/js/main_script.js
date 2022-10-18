@@ -1,5 +1,5 @@
 //dark mode
-function toggleDarkLight() {
+const toggleDarkLight = () => {
     var body = document.getElementById("body");
     var currentClass = body.className;
     // var divClass = div.className
@@ -35,9 +35,9 @@ const mapPokemons = (pokemon) => {
         type:poke.types[0].type.name,
         hp:poke.stats[0].base_stat +` Hp`,
         exp:poke.base_experience +` Exp`,
-        attack:poke.stats[1].base_stat +` K`,
-        special:poke.stats[3].base_stat +` K`,
-        defense:poke.stats[2].base_stat +` K`,       
+        attack:poke.stats[1].base_stat +`K`,
+        special:poke.stats[3].base_stat +`K`,
+        defense:poke.stats[2].base_stat +`K`,       
   })) 
   return mappedPokemons;  
 }
@@ -49,6 +49,7 @@ const drawPokemons = (pokemons) => {
   for (const pokemon of pokemons) {
     let pokecard$$ = document.createElement("div");
         pokecard$$.className = "b-poke-card";
+        pokecard$$.setAttribute ('data-aos', 'fade-up', '1000');
         pokecard$$.innerHTML = ` 
           <div class="b-poke-card-header">
           </div>
@@ -133,5 +134,8 @@ async function init() {
     dark$$.addEventListener('click', () => searchPokemons("dark", mappedPokemons));
     let fairy$$ = document.querySelector('.fairyPokemon');
     fairy$$.addEventListener('click', () => searchPokemons("fairy", mappedPokemons));
+    let ground$$ = document.querySelector('.groundPokemon');
+    ground$$.addEventListener('click', () => searchPokemons("ground", mappedPokemons));
+    AOS.init();
 }
 init();
